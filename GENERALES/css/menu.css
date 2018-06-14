@@ -1,0 +1,134 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #FEFEFE;
+}
+
+.menu_bar{
+  display: none;
+}
+header{
+  width: 100%;
+  
+}
+header nav{
+  background-color: #37474f;
+  z-index: 1000; /*El menu estara arriba de los demas elementos*/
+}
+header nav ul{
+  list-style: none;
+}
+header nav ul li{
+  display: inline-block; /*Lo usamos para poner uno a lado del otro*/
+  position: relative; /*Sirve para los submenus*/
+}
+header nav ul li:hover{
+  background: #ff6d00;
+}
+header nav ul li a{
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'Patua One', cursive;
+}
+header nav ul li a span{
+  margin-right: 10px;
+}
+
+/*Hijos*/
+header nav ul li .children{
+  display: none; /*Para ocultarlas*/
+  background: #263238;
+  position: absolute;/*Es para que no se vea feo, recordar que ya pusimos un relative arriba*/
+  width: 100%;
+  z-index: 1000;/*Para que n0 se sobreponga los textos o algo asi*/
+  text-align: center;
+}
+header nav ul li .children li{
+  display: block; /*Para que avarquen el 100%;*/
+  overflow: hidden;/*Para solucionar los problemas que deja un float left*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+header nav ul li .children li:hover{
+  background-color: #9e9e9e;
+}
+header nav ul li .children li a{
+  display: block;/*para que tome el 100%;*/
+}
+header nav ul li .children li a span{
+  float: right;
+  position: relative;
+  top: 3px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+header nav ul li .caret{
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 800px){
+  body{
+    padding-top: 80px; /*Aqui es 80 pero el tamaño depende del tamaño de la barra*/
+  }
+  .menu_bar{
+    display: block;
+    width: 100%;
+  }
+  .menu_bar .bt-menu{
+    display: block;
+    color: white;
+    overflow: hidden;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .menu_bar a{
+    font-size: 1.6em;
+    font-family: 'Patua One', cursive;
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+  .menu_bar span{
+    float: right;
+    line-height: 1.1;
+    font-size: 1.8em;
+    padding-right: 20px;
+  }
+  header nav{
+    width: 80%;
+    height: calc(100vh - 120px);
+    position: absolute;
+    right: 100%;/*para empujarlo hacia la izquierda*/
+    margin: 0;
+    overflow-y: scroll;/*para dar un scroll po sies pantalla pequeña*/
+  }
+  header nav ul li{
+    display: block;
+    border-bottom: 1px solid solid rgba(255, 255, 255, 0.5);
+  }
+  header nav ul li a{
+    display: block;
+  }
+  header nav ul li:hover .children{
+    display: none;
+  }
+  header nav ul li .children{
+    width: 100%;
+    position: relative;
+  }
+  header nav ul li .children a{
+    margin-left: 20px;
+  }
+  header nav ul li .caret{
+    float: right;
+  }
+}

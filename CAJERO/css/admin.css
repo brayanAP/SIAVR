@@ -1,0 +1,263 @@
+*{padding: 0;margin: 0; text-decoration: none;}
+html{box-sizing: border-box;}
+*,*::before,*::after{box-sizing: inherit;}
+body{background-color: #eceff1;}
+/*---------------------------------------------------{TABLA}---------------------------------------------------*/
+div.tabla{
+	width: 95%;
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+div.tabla table{
+	width: 100%;
+}
+div.tabla table thead{
+	background: #90a4ae;
+	color: white;
+}
+div.tabla table thead td{
+	height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Patua One', cursive;
+	font-size: 1.4em;
+}
+div.tabla table tbody tr{
+	transition: all 0.1s ease;
+}
+div.tabla table tbody tr td{
+	padding-top: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	font-size: 1.2em;
+	color: #212121;
+}
+div.tabla table tbody tr td a i{
+	font-size: 1.8em;
+	color: #ff6d00;
+}
+div.tabla table tbody tr:hover{
+	background-color: #80d8ff;
+	font-weight: bold;
+}
+/*---------------------------------------------------{FORMULARIO}---------------------------------------------------*/
+div.formulario-nuevo{
+	width: 95%;
+	height: 95%;
+	margin: 0 auto;
+	display: block;
+}
+div.formulario-nuevo form{
+	width: 50vw;
+	padding-top: 40px;
+	margin: 0 auto
+}
+div.formulario-nuevo form fieldset{
+	width: 100%;
+	height: 350px;
+	border: 4px solid #263238;
+	background-color: #90a4ae;
+}
+
+div.formulario-nuevo form fieldset legend{
+	font-size: 1.6em;
+	font-family: 'Patua One', cursive;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ff3d00;
+	background-color: #90a4ae;
+	text-transform: uppercase;
+}
+div.formulario-nuevo form fieldset input,div.formulario-nuevo form fieldset select{
+	width: 300px;
+	height: 35px;
+	display: block;
+	font-size: 1.3em;
+	margin: 0 auto;
+	padding-left: 10px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+
+
+input.btn-guardar{
+	width: 180px;
+	height: 50px;
+	font-size: 1.8em;
+	color: white;
+	font-family: 'Patua One', cursive;
+	background-color: #ff6d00;
+	border-radius: 10px;
+	transition: all 1s ease;
+	margin-top: 30px;
+	float: right;
+}
+
+input.btn-guardar:hover{
+	background-color: #fbe9e7;
+	color:#ff6d00;
+	transform: scale(1.1);
+}
+#busqueda{
+	width: 100%;
+	height: 60px;
+}
+#barra-busqueda{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#barra-busqueda form{
+	width: 500px;
+	height: 100%;
+	line-height: 2.5;
+	float: right;
+	padding-left: 110px;
+}
+#barra-busqueda form input{
+	float: left;
+	font-size: 1em;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+
+}
+#barra-busqueda form button{
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: #ff6d00;
+	color: white;
+	border-style: none;
+	border-radius: 10px;
+	line-height: 0;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+#barra-busqueda form button:hover{
+	background-color: #263238;
+	transform: scale(1.1);
+}
+#barra-busqueda form button i{
+	font-size: 2.4em;
+	color:white;
+}
+
+div#mesas{
+	width: 100%;
+	height: 100%;
+	background-color: #78909c;
+}
+
+div#mesas a{
+	width: 150px;
+	height: 150px;
+	background-color: #ff6d00;
+	float: left;
+	margin: 20px;
+	margin-left: 27px;
+	color: white;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 40px;
+	border-radius: 10px;
+	font-family: 'Patua One', cursive;
+}
+
+@media screen and (max-width: 1300px){
+	div#mesas a{
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		margin-left: 11.5px;
+		padding-top: 20px;
+	}
+}
+
+div#menuopciones{
+	width: 80vw;
+	height: 80vh;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #37474f;
+	overflow-y: scroll;
+}
+
+
+div#menuopciones a{
+	width: 200px;
+	height: 200px;
+	background-color: #ff6d00;
+	display: inline-block;
+	text-align: center;
+	border-radius: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #eceff1;
+	margin-left: 85px;
+}
+
+div#menuopciones a:hover{
+	background-color: #263238;
+	border: 4px solid  #ff6d00;
+}
+
+@media screen and (max-width: 830px){
+	div#menuopciones a{
+		margin-left: 230px;
+	}
+}
+
+div#menuopciones a i{
+	font-size: 10em;
+}
+
+div#menuopciones a p{
+	font-size: 1.4em;
+	font-family: 'Patua One', cursive;
+}
+
+body{
+	background-color: #90a4ae;
+}
+
+
+div.formulario-toma{
+	width: 90vw;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+div.formulario-toma input{
+	width: 500px;
+	height: 40px;
+	display: block;
+	font-size: 1.3em;
+	margin: 0 auto;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+input.btn-toma{
+	width: 180px!important;
+	height: 60px!important;
+	font-size: 2em!important;
+	color: white;
+	font-family: 'Patua One', cursive;
+	background-color: #ff6d00;
+	border-radius: 10px;
+	transition: all 1s ease;
+	margin-top: 30px;
+}
+
+input.btn-toma:hover{
+	background-color: #263238;
+	color:#ff6d00;
+	transform: scale(1.1);
+}
